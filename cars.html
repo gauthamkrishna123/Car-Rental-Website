@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cars | DriveEase</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Load data first, then the rendering logic -->
+    <script src="js/data.js" defer></script>
+    <script src="js/cars.js" defer></script>
+    <style>
+
+    </style>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="DriveEase home">
+        <span class="brand-icon" aria-hidden="true">🚘</span>
+        <span><strong>Fast<span>Drive</span></strong><small>Rent · Drive · Explore</small></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="about.html">About</a>
+        <a href="booking.html">Booking</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+        <a class="button button-small" href="booking.html">Book Now <span aria-hidden="true">→</span></a>
+      </div>
+    </nav>
+  </header>
+
+    <main class="container">
+        <h1>Explore Our Cars</h1>
+        <p>Choose the perfect car for your journey.</p>
+
+        <!-- JavaScript will render cars inside this element -->
+        <div class="car-grid" id="carGrid"></div>
+
+        <p id="emptyState" hidden>No cars found.</p>
+    </main>
+
+</body>
+</html>
