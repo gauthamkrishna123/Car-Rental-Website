@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DriveEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <script src="js/shared.js" defer></script>
+    <script src="js/contact.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+            <strong>Drive<span>Ease</span></strong>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="cars.html">Cars</a>
+            <a href="about.html">About</a>
+            <a href="booking.html">Booking</a>
+            <a class="active" href="contact.html">Contact</a>
+        </div>
+
+        <a href="booking.html" class="button button-small">Book Now →</a>
+    </nav>
+</header>
+
+<main>
+    <section class="contact-hero">
+        <div class="container">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h1>We'd Love to Hear From You</h1>
+            <p>Questions about a vehicle or your trip? Send us a message.</p>
+        </div>
+    </section>
+
+    <section class="container contact-layout">
+
+        <div class="contact-info">
+            <p class="eyebrow">CONTACT INFORMATION</p>
+            <h2>Let's Talk About Your Journey</h2>
+            <p class="contact-description">
+                Have questions about our cars or booking process?
+                Use the form or contact us using the details below.
+            </p>
+
+            <article class="contact-item">
+                <span class="contact-icon">☎</span>
+                <div>
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+            </article>
+
+            <article class="contact-item">
+                <span class="contact-icon">✉</span>
+                <div>
+                    <h3>Email</h3>
+                    <p>support@driveease.example</p>
+                </div>
+            </article>
+
+            <article class="contact-item">
+                <span class="contact-icon">⌖</span>
+                <div>
+                    <h3>Location</h3>
+                    <p>Kochi, Kerala, India</p>
+                </div>
+            </article>
+
+            <div class="contact-note">
+                <strong>Need a car?</strong>
+                <p>Explore our vehicles and choose one for your next trip.</p>
+                <a href="cars.html" class="text-link">Explore Cars →</a>
+            </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+            <h2>Send Us a Message</h2>
+            <p class="contact-description">
+                Fill in the details below and we'll show your message
+                confirmation.
+            </p>
+
+            <label for="contactName">Full Name *</label>
+            <input type="text" id="contactName" name="name"
+                   placeholder="Your name" autocomplete="name" required>
+            <small class="error" id="contactNameError"></small>
+
+            <label for="contactEmail">Email Address *</label>
+            <input type="email" id="contactEmail" name="email"
+                   placeholder="you@example.com"
+                   autocomplete="email" required>
+            <small class="error" id="contactEmailError"></small>
+
+            <label for="contactSubject">Subject *</label>
+            <input type="text" id="contactSubject" name="subject"
+                   placeholder="How can we help?" required>
+            <small class="error" id="contactSubjectError"></small>
+
+            <label for="contactMessage">Message *</label>
+            <textarea id="contactMessage" name="message" rows="5"
+                      placeholder="Write your message here..."
+                      required></textarea>
+            <small class="error" id="contactMessageError"></small>
+
+            <button type="submit" class="button contact-submit">
+                Send Message →
+            </button>
+
+            <p id="contactSuccess" class="contact-success"
+               role="status" aria-live="polite" hidden></p>
+
+            <p class="form-note">
+                Demo form only. Messages are not sent to a real email address.
+            </p>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-bottom">
+        <p>© <span id="year"></span> DriveEase. Demo project.</p>
+        <p>Built with HTML, CSS & JavaScript</p>
+    </div>
+</footer>
+
+<button class="back-to-top" id="backToTop"
+        aria-label="Back to top">↑</button>
+
+</body>
+</html>

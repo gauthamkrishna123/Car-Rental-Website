@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Cars | DriveEase</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cars.css">
 
     <!-- Load data first, then the rendering logic -->
     <script src="js/data.js" defer></script>
     <script src="js/cars.js" defer></script>
-    <style>
 
-    </style>
 </head>
 <body>
 
@@ -24,28 +23,65 @@
       </a>
       <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
       <div class="nav-links" id="navLinks">
-        <a class="active" href="index.html">Home</a>
-        <a href="cars.html">Cars</a>
+        <a href="index.html">Home</a>
+        <a class="active" href="cars.html" aria-current="page">Cars</a>
         <a href="about.html">About</a>
         <a href="booking.html">Booking</a>
         <a href="contact.html">Contact</a>
       </div>
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+        <!-- <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button> -->
         <a class="button button-small" href="booking.html">Book Now <span aria-hidden="true">→</span></a>
       </div>
     </nav>
   </header>
 
-    <main class="container">
-        <h1>Explore Our Cars</h1>
+<main class="container cars-page">
+
+    <section class="cars-hero">
+        <span class="section-label">FIND YOUR RIDE</span>
+        <h1>Explore Our <span>Cars</span></h1>
         <p>Choose the perfect car for your journey.</p>
+    </section>
 
-        <!-- JavaScript will render cars inside this element -->
-        <div class="car-grid" id="carGrid"></div>
+    <section class="cars-toolbar" aria-label="Search and filter cars">
 
-        <p id="emptyState" hidden>No cars found.</p>
-    </main>
+        <input
+            type="search"
+            id="carSearch"
+            placeholder="Search cars by name..."
+            aria-label="Search cars"
+        >
+
+        <select id="categoryFilter" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="SUV">SUV</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Hatchback">Hatchback</option>
+            <option value="Luxury">Luxury</option>
+        </select>
+
+        <select id="sortCars" aria-label="Sort cars by price">
+            <option value="default">Sort by: Default</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+
+    </section>
+
+    <p class="car-count" id="carCount"></p>
+
+    <section
+        class="car-grid"
+        id="carGrid"
+        aria-label="Available cars"
+    ></section>
+
+    <p id="emptyState" class="empty-state" hidden>
+        No cars found. Try another search or category.
+    </p>
+
+</main>
 
 </body>
 </html>

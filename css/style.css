@@ -82,6 +82,10 @@ h2 { margin: 0; color: var(--text); font-size: clamp(26px, 3vw, 34px); line-heig
 .car-card:nth-child(2) .car-badge { background: #35a66c; }
 .car-card:nth-child(3) .car-badge { background: #8a65cc; }
 .car-card:nth-child(4) .car-badge { background: #ed7b32; }
+.car-card:nth-child(5) .car-badge { background: #11e7f7; }
+.car-card:nth-child(6) .car-badge { background: #df0f0f; }
+.car-card:nth-child(7) .car-badge { background: #6f016f; }
+.car-card:nth-child(8) .car-badge { background: #a3ce06; }
 .car-body { padding: 14px; }
 .car-body h3 { margin: 0 0 10px; font-size: 15px; }
 .car-specs { display: flex; flex-wrap: wrap; gap: 7px 12px; color: var(--muted); font-size: 10px; }
@@ -141,6 +145,8 @@ body.dark-mode .search-field input, body.dark-mode .search-field select { color:
 body.dark-mode .car-badge { color: white; }
 body.dark-mode .button-outline { color: #b6d9f6; border-color: #7dbcf2; }
 body.dark-mode .button-outline:hover { color: #0c1d2c; background: #7dbcf2; }
+
+
 
 @media (max-width: 1000px) {
   .navbar { gap: 18px; }

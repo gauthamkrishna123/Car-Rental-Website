@@ -35,7 +35,7 @@ function renderCars(list) {
   if (emptyState) emptyState.hidden = list.length > 0;
 }
 
-renderCars(cars);
+renderCars(cars.slice(0,4));
 
 // Mobile navigation menu.
 if (menuToggle && navLinks) {

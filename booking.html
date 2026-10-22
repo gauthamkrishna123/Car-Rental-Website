@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Car | DriveEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+
+    <!-- Load car data before booking.js -->
+    <script src="js/data.js" defer></script>
+    <script src="js/shared.js" defer></script>
+    <script src="js/booking.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="navbar container">
+        <a class="brand" href="index.html">
+            <strong>Drive<span>Ease</span></strong>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="cars.html">Cars</a>
+            <a href="about.html">About</a>
+            <a class="active" href="booking.html">Booking</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="booking-heading">
+        <div class="container">
+            <p class="eyebrow">BOOK YOUR NEXT RIDE</p>
+            <h1>Reserve Your Car</h1>
+            <p>Enter your details to calculate your rental estimate.</p>
+        </div>
+    </section>
+
+    <section class="container booking-layout">
+        <form id="bookingForm" class="booking-form">
+
+            <h2>Customer Details</h2>
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" required
+                   placeholder="Enter your full name">
+            <small class="error" id="nameError"></small>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required
+                   placeholder="example@gmail.com">
+            <small class="error" id="emailError"></small>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required maxlength="10"
+                   inputmode="numeric" placeholder="10-digit phone number">
+            <small class="error" id="phoneError"></small>
+
+            <h2>Trip Details</h2>
+
+            <label for="carSelect">Choose a Car</label>
+            <select id="carSelect" required>
+                <option value="">Select a car</option>
+            </select>
+            <small class="error" id="carError"></small>
+
+            <label for="pickupLocation">Pickup Location</label>
+            <input type="text" id="pickupLocation" required
+                   placeholder="Enter pickup location">
+
+            <label for="pickupDate">Pickup Date</label>
+            <input type="date" id="pickupDate" required>
+            <small class="error" id="pickupError"></small>
+
+            <label for="returnDate">Return Date</label>
+            <input type="date" id="returnDate" required>
+            <small class="error" id="returnError"></small>
+
+            <button type="submit" class="button">
+                Confirm Demo Booking →
+            </button>
+
+            <p id="bookingMessage" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="booking-summary">
+            <h2>Booking Summary</h2>
+            <p>Selected Car: <strong id="summaryCar">Not selected</strong></p>
+            <p>Price Per Day: <strong id="dailyPrice">₹ 0</strong></p>
+            <p>Rental Duration: <strong id="rentalDays">0 days</strong></p>
+            <hr>
+            <h3>Total: <span id="totalPrice">₹ 0</span></h3>
+            <p class="summary-note">
+                This is a demo estimate, not a real reservation.
+            </p>
+        </aside>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-bottom">
+        <p>© <span id="year"></span> DriveEase. Demo project.</p>
+    </div>
+</footer>
+
+</body>
+</html>
